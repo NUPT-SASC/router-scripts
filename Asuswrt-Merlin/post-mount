@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# mount upan to /opt
+if [ "$1" = "/tmp/mnt/test" ] ; then
+  ln -nsf $1/entware /tmp/opt
+fi
+
+
+# Turn On Usage Of Swapfile
+if [ -f "/tmp/mnt/test/swapfile" ];then
+swapon /tmp/mnt/test/swapfile
+echo "Turning Swapfile On"
+fi
