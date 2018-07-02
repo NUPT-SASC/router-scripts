@@ -13,17 +13,26 @@
 ### $2 - elapsed time (s) from previous state
 
 logger -t "di" "Internet state: $1, elapsed time: $2s."
-account="your dr.com accoutn here"
-password="your dr.com password here"
+
+ACCOUNT=""
+PASSWORD=""
+
+POST_DATA="DDDDD=${ACCOUNT}&upass=${PASSWORD}&0MKKey=%B5%C7%A1%A1%C2%BC&v6ip="
+AUTH_URL="http://192.168.168.168/0.htm"
+SUCCESS_FLAG="UID"
+TEMP_FILE_PATH='/etc/storage/result.html'
 
 if [[ $1 == 0 ]];then
-  logger -t  "NJUPT login" "网络断开，尝试重连"
-  curl -d "DDDDD=$account&upass=$password&0MKKey=%B5%C7%A1%A1%C2%BC&v6ip=" -o 0.htm http://192.168.168.168/0.htm
-  if [ `grep -c "http://192.168.168.168:9002" 0.htm` -gt '0' ]; then
-    logger -t "NJUPT login" "重连成功!"
+  logger -t  "NJUPT auth" "网络断开，尝试重连"
+  wget -O ${TEMP_FILE_PATH} -q --post-data=${POST_DATA} $AUTH_URL
+  if grep -Fq "${SUCCESS_FLAG}" ${TEMP_FILE_PATH};
+  then
+    logger -t "NJUPT auth" "认证成功!"
   else
-    logger -t "NJUPT login" "尝试重连失败，检查是不是密码出错!"
+    logger -t "NJUPT auth" "认证失败"
   fi
 else
-  logger -t "NJUPT login" "重连成功以经过验证"
+  logger -t "NJUPT auth" "网络连接正常"
 fi
+
+rm ${TEMP_FILE_PATH}

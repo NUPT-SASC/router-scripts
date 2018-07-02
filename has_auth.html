@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GB2312" />
+<title>Dr.COM������Ϣ��                         </title>
+<script language="JavaScript"><!--
+businessurl='';
+welcome='';
+bannerurl='';
+logourl='';
+serialno='';
+portalver='';
+portalname='�Ͼ��ʵ��ѧ';
+portalid='JS0300474_000';
+cvid=0,pvid=0;      
+pwm=1;v6af=1234567890;v6df=1234567890;uid='12345678901234567890123456';pwd='1234567890123456';v46m=001;v4ip='192.168.100.100';v6ip='0000:0000:0000:0000:0000:0000:0000:0000';
+time='3021      ';flow='19204269  ';fsele=1;fee='0         ';xsele=0;xip='000.000.000.000.';
+flow0=flow%1024;flow1=flow-flow0;flow0=flow0*1000;flow0=flow0-flow0%1024;fee1=fee-fee%100;
+flow3='.';
+if(flow0/1024<10)flow3='.00';
+else{if(flow0/1024<100)flow3='.0';}
+function DispTFM(sele){
+switch(sele){
+	case 0:
+		document.write("��ʹ��ʱ�� : "+time +" Min");
+		break;
+	case 1:
+	    document.write("��ʹ������ : "+flow1/1024+flow3+flow0/1024+" MByte");
+	    break;
+	case 2:
+		if(fsele==1)document.write("��� : "+"RMB"+fee1/10000);
+			break;
+		case 3:
+			if(xsele==1)document.write("����ӳ���ַ : "+xip);
+			break;			
+		}}
+url3='1.htm';url4='F.htm';
+s2=0;
+function wc(){if(window.confirm("ȷ��ע��?")){s2=1;window.location=url4}}
+
+function checkphone(){
+if((navigator.userAgent.indexOf('iPad') > 0) || (navigator.userAgent.indexOf('Windows NT') > 0))return;
+if((navigator.userAgent.indexOf('Mobile') > 0) ){}
+else return;
+s2=1;
+window.location='a31.htm';
+}
+
+// --></script>
+<style><!--
+a {text-decoration: none; color:#2365AF;}
+body {margin:0; padding:0; text-align:center; background-color:#EFF9FE;}
+.font1 {font-size:13px; font-family:Microsoft YaHei; line-height:24px; color:#606060;}
+.font2 {font-size:12px; font-family:Microsoft YaHei; line-height:24px; color:#719CB3;}
+.con {width: 1000px; height:600px; margin-right: auto; margin-left: auto;}
+.bg {background-image: url('a01.jpg'); background-repeat: no-repeat; width: 1000px; height:600px;}
+#submit{		
+background-color: #ffb94b;
+background-image: -webkit-gradient(linear, left top, left bottom, from(#fddb6f), to(#ffb94b));
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+border-width: 1px;
+border-style: solid;
+border-color: #d69e31 #e3a037 #d5982d #e3a037;
+float: left;
+height: 28px;
+padding: 0;
+width: 109px;
+cursor: pointer;
+font: 14px Microsoft YaHei, Helvetica;
+color: #8f5a0a;
+}
+#submit:hover,#submit:focus{		
+background-color: #fddb6f;
+background-image: -webkit-gradient(linear, left top, left bottom, from(#ffb94b), to(#fddb6f));
+}	
+#submit:active{		
+	outline: none;
+	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;		
+}
+--></style>
+</head>
+<!--Dr.COMWebLoginID_1.htm-->
+<body onload="checkphone()">
+<div class="con">
+	<div class="bg">
+		<div id="left" style="float:left; width:320px; margin-top: 175px; margin-left:140px;">
+			<div id="welcome" style="float:top; height:160px; text-align:left;" class="font1">                                                                                                                                                                                                        </div>
+
+
+<div id="download" style="float:top; margin-top: 60px;"></div>
+			<div id="foot" style="float:top; height:20px; margin-top: 0px;" class="font2">
+			���������������ɳ����ȵ��ṩ
+			</div>
+		</div>
+		
+<div id="login" style="float:left; width:300px; height:245px; margin-top: 133px; margin-left:52px">
+<div style="background:url(a58.png) no-repeat center; width:300px; height:75px; margin-bottom:10px;"></div>
+		<form name="f1" method="post" action="">
+			<div id="info" style="height:100px; padding-top:12px;" class="font1">
+				<script language="javascript">DispTFM(0)</script><br>
+				<script language="javascript">DispTFM(1)</script><br>
+				<script language="javascript">DispTFM(2)</script><br>
+				<script language="javascript">DispTFM(3)</script>
+			</div>
+			<div id="btn" style="height:30px; margin-top:22px;">
+				<input id="submit" type="button" value="ע����" onClick="javascript:wc()" style="margin-left:95px;">
+			</div>
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>
