@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # 添加cru计划，每个一分钟检测一次网络状况
-cru a auto_login "*/1 * * * * /jffs/scripts/auto_login_script.sh"
+cru a auto_login "*/1 * * * * /jffs/scripts/auth_njupt.sh"
 
 RC='/opt/etc/init.d/rc.unslung'
 i=30

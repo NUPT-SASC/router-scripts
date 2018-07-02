@@ -8,7 +8,7 @@
 
 就一个，自动登录南邮校园网并断网重连，保证有电就有网
 
-### 四个html
+### htmls中的四个html
 
 - `not_auth.html`: **尚未认证**时 GET http://192.168.168.168 得到的html
 - `has_auth.html`: **已经认证**时 GET http://192.168.168.168 得到的html
