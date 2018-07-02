@@ -13,7 +13,7 @@ wget -O ${TEMP_FILE_PATH} -q $CHEKC_URL
 if grep -Fq "0.htm" ${TEMP_FILE_PATH};
 then
     # 尚未登录
-    logger -t "网络断开，尝试认证..."
+    echo "网络断开，尝试认证..."
     wget -O ${TEMP_FILE_PATH} -q --post-data=${POST_DATA} $AUTH_URL
     if grep -Fq "UID" ${TEMP_FILE_PATH};
     then
